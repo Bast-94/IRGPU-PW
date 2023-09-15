@@ -22,31 +22,31 @@ int main(int argc, char **argv) {
               << " name: " << deviceProp.name
               << std::endl;
     std::cerr << " Computational Capabilities: " 
-              << "FIXME" //@@ Print appropriate `deviceProp` field
+              << deviceProp.minor
               << "."
-              << "FIXME" //@@ Print appropriate `deviceProp` field
+              << deviceProp.major
               << std::endl;
     std::cerr << " Maximum global memory size: " 
-              << "FIXME" //@@ Print appropriate `deviceProp` field
+              << deviceProp.totalGlobalMem
               << std::endl;
     std::cerr << " Maximum constant memory size: " 
-              << "FIXME" //@@ Print appropriate `deviceProp` field
+              << deviceProp.totalConstMem 
               << std::endl;
     std::cerr << " Maximum shared memory size per block: "
-              << "FIXME" //@@ Print appropriate `deviceProp` field
+              << deviceProp.sharedMemPerBlock
               << std::endl;
     std::cerr << " Maximum block dimensions: " 
-              << "FIXME" //@@ Print appropriate `deviceProp` field
-              << " x " << "FIXME" //@@ Print appropriate `deviceProp` field
-              << " x " << "FIXME" //@@ Print appropriate `deviceProp` field
+              << deviceProp.maxThreadsDim[0]
+              << " x " << deviceProp.maxThreadsDim[1]
+              << " x " << deviceProp.maxThreadsDim[2]
               << std::endl;
     std::cerr << " Maximum grid dimensions: " 
-              << "FIXME" //@@ Print appropriate `deviceProp` field
-              << " x " << "FIXME" //@@ Print appropriate `deviceProp` field
-              << " x " << "FIXME" //@@ Print appropriate `deviceProp` field
+              << deviceProp.maxGridSize[0] 
+              << " x " << deviceProp.maxGridSize[1] 
+              << " x " << deviceProp.maxGridSize[2] 
               << std::endl;
     std::cerr << " Warp size: " 
-              << "FIXME" //@@ Print appropriate `deviceProp` field
+              << deviceProp.warpSize
               << std::endl;
   }
   std::cerr << "End of GPU data gathering." << std::endl;
