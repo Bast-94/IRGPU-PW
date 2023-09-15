@@ -6,3 +6,5 @@
 *.fatbin
 device_query
 device_query.txt
+shell.nix
+student_resources.tar.gz

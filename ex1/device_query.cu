@@ -18,6 +18,7 @@ int main(int argc, char **argv) {
                   << std::endl;
       }
     }
+    std::cerr << 100/3;
     std::cerr << "Device " << dev 
               << " name: " << deviceProp.name
               << std::endl;
